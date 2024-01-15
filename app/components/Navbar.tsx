@@ -52,7 +52,7 @@ export default function Navbar() {
           <Button
             variant={"ghost"}
             className="flex flex-col gap-y-1.5 h-12 w-12 sm:h-20 sm:w-20 md:h-24 md:w-24 rounded-none"
-            onClick={() => handleCartClick('productId')}
+            onClick={() => handleCartClick()}
           >
             <ShoppingCart />
             <span className="hidden text-xs font-semibold text-gray-500 sm:block">

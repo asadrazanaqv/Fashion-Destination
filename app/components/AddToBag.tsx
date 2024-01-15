@@ -33,8 +33,8 @@ export default function AddToBag({
   };
   return (
     <Button className="hover:bg-blue-700 rounded-3xl font-medium text-black"
-    onClick={() => {
-      addItem(product), handleCartClick("productId");
+      onClick={() => {
+        addItem(product), handleCartClick();
       }}
     >
       Add to Cart
