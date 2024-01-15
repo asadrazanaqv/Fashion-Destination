@@ -36,6 +36,7 @@ export default function ShoppingCartModal() {
   }
   
   return (
+    <>
     <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick('productId')}>
       <SheetContent className="sm:max-w-lg w-[90vw]">
         <SheetHeader>
@@ -46,10 +47,8 @@ export default function ShoppingCartModal() {
 
         <div className="h-full flex flex-col justify-between">
           <div className="mt-8 flex-1 overflow-y-auto">
-            <ul className="-my-6 divide-y divide-gray-200">
-              {cartCount === 0 ? (
-                <h3 className="py-6">You Don't have any Items</h3>
-              ) : (
+            <ul className="my-6 divide-y divide-gray-200">
+              {cartCount === 0 ? ( <h3 className="py-6">You Don't have any Items</h3> ) : (
                 <>
                   {Object.values(cartDetails ?? {}).map((entry) => (
                     <li key={entry.id} className="flex py-6">
@@ -128,5 +127,6 @@ export default function ShoppingCartModal() {
         </div>
       </SheetContent>
     </Sheet>
+    </>
   );
 }
