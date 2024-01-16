@@ -19,6 +19,9 @@ async function getData() {
   return data;
 }
 
+export const dynamic = "force-dynamic";
+
+
 export default async function Newest() {
   const data: simplifiedProduct[] = await getData();
 
